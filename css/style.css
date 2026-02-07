@@ -1636,6 +1636,56 @@ h3 {
   opacity: 0.85;
 }
 
+/* === CHARACTER CARD THAI STYLING === */
+
+/* Thai character names */
+.thai-char-name {
+  font-family: var(--font-thai);
+  font-size: 0.7em;
+  font-weight: 500;
+  opacity: 0.85;
+}
+
+/* Thai character titles */
+.thai-char-title {
+  font-family: var(--font-thai);
+  font-size: 0.85em;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+/* Thai tiny text for card details */
+.thai-text-tiny {
+  display: block;
+  font-family: var(--font-thai);
+  font-size: 0.8em;
+  line-height: 1.5;
+  opacity: 0.75;
+  margin-top: 0.2rem;
+}
+
+/* Thai motto styling */
+.thai-motto {
+  display: block;
+  font-family: var(--font-thai);
+  font-size: 0.7em;
+  margin-top: 0.3rem;
+  opacity: 0.85;
+}
+
+/* INCREASE CARD HEIGHT FOR BILINGUAL CONTENT */
+.char-card {
+  height: 620px; /* Increased from 540px */
+}
+
+.char-card-back {
+  padding: 2.5rem 1.5rem 2rem; /* More padding */
+}
+
+.char-card-back h3 {
+  margin-bottom: 1.2rem;
+}
+
 /* Mobile adjustments for Thai text */
 @media (max-width: 768px) {
   .thai-tagline {
@@ -1652,5 +1702,24 @@ h3 {
 
   .thai-text-small {
     font-size: 0.8em;
+  }
+
+  .char-card {
+    height: 680px; /* Even taller on mobile for readability */
+  }
+
+  .thai-text-tiny {
+    font-size: 0.75em;
+  }
+}
+
+@media (max-width: 480px) {
+  .char-card {
+    height: 600px;
+  }
+
+  .thai-char-title {
+    display: block;
+    margin-top: 0.2rem;
   }
 }
