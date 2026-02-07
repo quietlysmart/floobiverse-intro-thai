@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en-TH">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Floobiverse™ — What If Paint Came Alive? | ถ้าสีมีชีวิต?</title>
+  <meta name="description" content="Welcome to The Floobiverse — a colorful world where paint comes alive. Meet Floob and his friends in the Land of Chromia. | ยินดีต้อนรับสู่ Floobiverse — โลกสีสันที่สีมีชีวิต">
+
+  <!-- Preload critical assets -->
+  <link rel="preload" as="image" href="assets/images/hero/hero-bg.png">
+  <link rel="preload" as="image" href="assets/images/hero/logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Fredoka:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;600;700&family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <!-- Favicon (Floob eye) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%234ECDC4' stroke='%23000' stroke-width='5'/><circle cx='50' cy='50' r='22' fill='white' stroke='%23000' stroke-width='4'/><circle cx='50' cy='50' r='10' fill='%23000'/><text x='47' y='56' font-size='14' font-weight='bold' fill='white'>c</text></svg>">
+</head>
+<body>
+
+  <!-- ========== LOADING SCREEN ========== -->
+  <div class="loader" id="loader">
+    <div class="loader-content">
+      <!-- Floob eye SVG animation -->
+      <svg class="loader-floob" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+        <!-- Floob body blob -->
+        <ellipse class="floob-body" cx="60" cy="65" rx="50" ry="45" fill="#4ECDC4" stroke="#000" stroke-width="4"/>
+        <!-- Eye white -->
+        <circle class="floob-eye-white" cx="60" cy="55" r="28" fill="white" stroke="#000" stroke-width="4"/>
+        <!-- Pupil (animated) -->
+        <circle class="floob-pupil" cx="60" cy="55" r="12" fill="#000"/>
+        <!-- Eye highlight -->
+        <text class="floob-highlight" x="55" y="60" font-size="16" font-weight="bold" fill="white">c</text>
+        <!-- Smile -->
+        <path class="floob-smile" d="M40 80 Q60 95 80 80" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+      <p class="loader-text">Loading the Floobiverse...<br><span class="thai-text">กำลังโหลด Floobiverse...</span></p>
+    </div>
+  </div>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="nav" aria-label="Main navigation">
+    <a href="#hero">
+      <img src="new assets/floobiverse-logo@2x.png" alt="The Floobiverse" class="nav-logo">
+    </a>
+    <ul class="nav-links">
+      <li><a href="#origin">Origin</a></li>
+      <li><a href="#characters">Characters</a></li>
+      <li><a href="#chromia">Chromia</a></li>
+      <li><a href="#episodes">Story</a></li>
+      <li><a href="#values">Values</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ========== SECTION 1: HERO ========== -->
+  <!-- B2-4: Two-column hero layout, removed dripping paint SVG -->
+  <section id="hero" class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-content">
+      <!-- B2: Left column - group character image -->
+      <div class="hero-left">
+        <img src="new assets/floobiverse-group-pic@2x.png" alt="Floobiverse characters" class="hero-group-img">
+      </div>
+      <!-- B2: Right column - logo and tagline -->
+      <div class="hero-right">
+        <!-- B3: Logo PNG from new assets -->
+        <img src="new assets/floobiverse-logo@2x.png" alt="The Floobiverse" class="hero-logo">
+        <h1 class="hero-tagline">What if <span class="paint-word">paint</span> came alive?<br><span class="thai-tagline">ถ้า<span class="paint-word">สี</span>มีชีวิต?</span></h1>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator" aria-hidden="true">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C11.5 2 11 2.19 10.59 2.59L3.59 9.59C2.81 10.37 2.81 11.63 3.59 12.41C4.37 13.19 5.63 13.19 6.41 12.41L11 7.83V20C11 21.1 11.45 22 12 22C12.55 22 13 21.1 13 20V7.83L17.59 12.41C18.37 13.19 19.63 13.19 20.41 12.41C21.19 11.63 21.19 10.37 20.41 9.59L13.41 2.59C13 2.19 12.5 2 12 2Z" transform="rotate(180 12 12)"/>
+      </svg>
+    </div>
+    <!-- B4: REMOVED - Paint Drip Divider was here, now removed per spec -->
+  </section>
+
+  <!-- ========== SECTION 2: ORIGIN STORY ========== -->
+  <section id="origin" class="origin">
+    <div class="blob-decoration blob-animated" aria-hidden="true"></div>
+    <div class="blob-decoration blob-animated" aria-hidden="true"></div>
+
+    <div class="origin-content">
+      <div class="origin-text reveal">
+        <span class="section-label" style="color: var(--lucky-yellow);">The Story Begins <span class="thai-label">| เรื่องราวเริ่มต้น</span></span>
+        <h2>The Origin of Floob<br><span class="thai-subtitle">กำเนิดของฟลูบ</span></h2>
+        <p>
+          A frustrated artist named Zack, disillusioned with his paintings, throws all his artwork from his balcony. Two jars of blue and green paint explode together on the street below. The next morning, he discovers a strange, quivering, one-eyed creature born from the paint.
+        </p>
+        <p class="thai-text">
+          ศิลปินหนุ่มชื่อแซ็ค ผิดหวังกับภาพวาดของตัวเอง โยนผลงานทั้งหมดลงจากระเบียง ขวดสีน้ำเงินและเขียวระเบิดรวมกันบนถนน เช้าวันรุ่งขึ้น เขาพบสิ่งมีชีวิตตาเดียวประหลาดที่เกิดจากสี
+        </p>
+        <p>
+          The creature laughs, squeaks, and has telekinetic and shapeshifting powers. Zack bonds with it, and is re-energised to paint again. One day, the curious creature leaps into one of Zack's landscape paintings and vanishes into a new land &mdash; Chromia.
+        </p>
+        <p class="thai-text">
+          สิ่งมีชีวิตนี้หัวเราะ ส่งเสียงร้อง และมีพลังจิตกับการแปลงร่าง แซ็คผูกพันกับมัน และกลับมามีแรงบันดาลใจวาดรูปอีกครั้ง วันหนึ่ง สิ่งมีชีวิตอยากรู้อยากเห็นกระโดดเข้าไปในภาพวาดทิวทัศน์และหายไปสู่ดินแดนใหม่ — โครเมีย
+        </p>
+        <div class="origin-quote reveal reveal-delay-2">
+          &ldquo;Be curious and have fun&rdquo;<br><span class="thai-quote">"อยากรู้อยากเห็นและสนุกให้เต็มที่"</span>
+        </div>
+      </div>
+      <!-- C5: Replaced easel image with floob-jumps-at-painting PNG -->
+      <div class="origin-image reveal reveal-delay-1">
+        <img src="new assets/floob-jumps-at-painting.png" alt="Floob jumps at a painting to enter Chromia" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- Paint Drip: Teal to White -->
+  <svg style="display:block;width:100%;height:60px;margin-top:-1px;" viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,0 L0,20 Q80,20 80,35 Q80,55 100,55 Q120,55 120,35 Q120,18 240,20 Q360,22 360,30 Q360,50 380,50 Q400,50 400,30 Q400,20 520,18 Q640,15 640,25 Q640,48 660,48 Q680,48 680,25 Q680,20 840,20 L840,35 Q840,55 860,55 Q880,55 880,35 Q880,18 1020,20 Q1160,22 1160,28 Q1160,50 1180,50 Q1200,50 1200,28 Q1200,20 1360,20 Q1400,20 1440,20 L1440,0 Z" fill="#00897B"/>
+    <rect x="0" y="0" width="1440" height="1" fill="#00897B"/>
+  </svg>
+
+  <!-- ========== SECTION 3: MEET THE CHARACTERS ========== -->
+  <section id="characters" class="characters">
+    <div class="characters-header reveal">
+      <span class="section-label">The Cast <span class="thai-label">| ตัวละคร</span></span>
+      <h2>Meet the Characters<br><span class="thai-subtitle">พบกับตัวละคร</span></h2>
+      <p>Nine colorful friends, each born from paint, each with unique powers and personalities. Click any card to discover more.</p>
+      <p class="thai-text">เพื่อนสีสันเก้าตัว แต่ละตัวเกิดจากสี แต่ละตัวมีพลังและบุคลิกเฉพาะตัว คลิกการ์ดเพื่อค้นพบเพิ่มเติม</p>
+    </div>
+
+    <div class="characters-grid">
+
+      <!-- FLOOB - D6: Updated with single character image from new assets -->
+      <div class="char-card" data-character="floob">
+        <div class="char-card-inner">
+          <div class="char-card-front">
+            <div class="char-card-img" style="background: linear-gradient(135deg, #e0f7fa 0%, #b2dfdb 100%);">
+              <img src="new assets/floob@2x.png" alt="Floob - The Friendly Hero" loading="lazy">
+            </div>
+            <div class="char-card-info">
+              <h3>Floob</h3>
+              <div class="char-title">The Friendly Hero</div>
+              <div class="char-hook">Enthusiastic, cheeky &amp; creative. Born from two jars of paint and a bolt of lightning.</div>
+            </div>
+            <span class="char-card-flip-hint">Click to flip</span>
+          </div>
+          <div class="char-card-back" style="border-color: var(--floob-teal);">
+            <h3 style="color: var(--floob-teal-dark);">Floob</h3>
+            <div class="char-detail">
+              <span class="char-detail-label" style="color: var(--floob-teal-dark);">Powers</span>
+              <span class="char-detail-value">Telekinesis, shape &amp; colour shifting, creating blob art</span>
+            </div>
+            <div class="char-detail">
+              <span class="char-detail-label" style="color: var(--floob-teal-dark);">Likes</span>
+              <span class="char-detail-value">Painting, dancing, popular culture, PB&amp;J sandwiches</span>
+            </div>
+            <div class="char-detail">
+              <span class="char-detail-label" style="color: var(--floob-teal-dark);">Secret</span>
+              <span class="char-detail-value">Conflicted between his love for Zack and wanting to live in Chromia forever</span>
+            </div>
+            <div class="char-motto accent-text" style="color: var(--floob-teal-dark);">&ldquo;Be curious and have fun&rdquo;</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BONBON - D6: Updated with single character image from new assets -->
+      <div class="char-card" data-character="bonbon">
+        <div class="char-card-inner">
+          <div class="char-card-front">
+            <div class="char-card-img" style="background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);">
+              <img src="new assets/bonbon@2x.png" alt="Bonbon - The Eternal Optimist" loading="lazy">
+            </div>
+            <div class="char-card-info">
+              <h3>Bonbon</h3>
+              <div class="char-title">The Eternal Optimist</div>
+              <div class="char-hook">Energetic, sweet &amp; clumsy. She can rejuvenate or sweeten anything she touches.</div>
+            </div>
+            <span class="char-card-flip-hint">Click to flip</span>
+          </div>
+          <div class="char-card-back" style="border-color: var(--bonbon-pink);">
+            <h3 style="color: var(--bonbon-pink);">Bonbon</h3>
+            <div class="char-detail">
+              <span class="char-detail-label">Powers</span>
+              <span class="char-detail-value">Can rejuvenate or sweeten anything</span>
+            </div>
+            <div class="char-detail">
+              <span class="char-detail-label">Likes</span>
+              <span class="char-detail-value">Candy and social events</span>
+            </div>
+            <div class="char-detail">
+              <span class="char-detail-label">Secret</span>
+              <span class="char-detail-value">Has tooth pain but is afraid of the dentist</span>
+            </div>
+            <div class="char-motto accent-text" style="color: var(--bonbon-pink);">&ldquo;Keep things sweet&rdquo;</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOO - D6: Updated with single character image from new assets -->
+      <div class="char-card" data-character="boo">
+        <div class="char-card-inner">
+          <div class="char-card-front">
+            <div class="char-card-img" style="background: linear-gradient(135deg, #ffebee 0%, #ef9a9a 100%);">
+              <img src="new assets/boo@2x.png" alt="Boo - The Gentle Giant" loading="lazy">
+            </div>
+            <div class="char-card-info">
+              <h3>Boo</h3>
+              <div class="char-title">The Gentle Giant</div>
+              <div class="char-hook">At 201cm tall, he's the biggest but the gentlest. His tail doubles as a wrecking ball.</div>
+            </div>
+            <span class="char-card-flip-hint">Click to flip</span>
+          </div>
+          <div class="char-card-back" style="border-color: var(--boo-red);">
+            <h3 style="color: var(--boo-red);">Boo</h3>
+            <div class="char-detail">
+              <span class="char-detail-label">Powers</span>
+              <span class="char-detail-value">Super strength, tail can be used as a wrecking ball</span>
+            </div>
+            <div class="char-detail">
+              <span class="char-detail-label">Likes</span>
+              <span class="char-detail-value">Parties, group songs, playing xylophone</span>
+            </div>
+            <div class="char-detail">
+              <span class="char-detail-label">Secret</span>
+              <span class="char-detail-value">Loves to dance but once destroyed a dance party with his tail</span>
+            </div>
+            <div class="char-motto accent-text" style="color: var(--boo-red);">&ldquo;Can&rsquo;t we all just get along?&rdquo;</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAFFY - D6: Updated with single character image from new assets -->
+      <div class="char-card" data-character="taffy">
+        <div class="char-card-inner">
+          <div class="char-card-front">
+            <div class="char-card-img" style="background: linear-gradient(135deg, #e0f7fa 0%, #80deea 100%);">
+              <img src="new assets/taffy@2x.png" alt="Taffy - The Comedian" loading="lazy">
+            </div>
+            <div class="char-card-info">
+              <h3>Taffy</h3>
+              <div class="char-title">The Comedian</div>
+              <div class="char-hook">Weird, quirky &amp; accidentally hilarious. Can stretch his body in any direction.</div>
+            </div>
+            <span class="char-card-flip-hint">Click to flip</span>
+          </div>
+          <div class="char-card-back" style="border-color: var(--taffy-cyan);">
+            <h3 style="color: var(--taffy-cyan);">Taffy</h3>
+            <div class="char-detail">
+              <span class="char-detail-label">Powers</span>
+              <span class="char-detail-value">Elasticity &mdash; can stretch arms and body in any way</span>
+            </div>
+            <div class="char-detail">
+              <span class="char-detail-label">Likes</span>
+              <span class="char-detail-value">Taffy, bubblegum, pranks, yodelling</span>
+            </div>
+            <div class="char-detail">
+              <span class="char-detail-label">Secret</span>
+              <span class="char-detail-value">Secretly messes with Quiddie using his elastic powers</span>
+            </div>
+            <div class="char-motto accent-text" style="color: var(--taffy-cyan);">&ldquo;If life gets you down, find something chewy&rdquo;</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GOGO - D6: Updated with single character image from new assets -->
+      <div class="char-card" data-character="gogo">
+        <div class="char-card-inner">
+          <div class="char-card-front">
+            <div class="char-card-img" style="background: linear-gradient(135deg, #f3e5f5 0%, #ce93d8 100%);">
+              <img src="new assets/gogo@2x.png" alt="Gogo - The Loyal Companion" loading="lazy">
+            </div>
+            <div class="char-card-info">
+              <h3>Gogo</h3>
+              <div class="char-title">The Loyal Companion</div>
+              <div class="char-hook">Optimistic &amp; fiercely loyal. Whatever Floob likes, Gogo likes. Whatever Floob doesn't &mdash; neither does Gogo.</div>
+            </div>
+            <span class="char-card-flip-hint">Click to flip</span>
+          </div>
+          <div class="char-card-back" style="border-color: var(--gogo-purple);">
+            <h3 style="color: var(--gogo-purple);">Gogo</h3>
+            <div class="char-detail">
+              <span class="char-detail-label">Powers</span>
+              <span class="char-detail-value">Super grip strength (hugging characters' legs)</span>
+            </div>
+            <div class="char-detail">
+              <span class="char-detail-label">Likes</span>
+              <span class="char-detail-value">Frisbee, red carpet treatment, belly rubs</span>
+            </div>
+            <div class="char-detail">
+              <span class="char-detail-label">Secret</span>
+              <span class="char-detail-value">Understands everything people are saying</span>
+            </div>
+            <div class="char-motto accent-text" style="color: var(--gogo-purple);">&ldquo;I love you, you love me&rdquo;</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DIDI - D6: Updated with single character image from new assets -->
+      <div class="char-card" data-character="didi">
+        <div class="char-card-inner">
+          <div class="char-card-front">
+            <div class="char-card-img" style="background: linear-gradient(135deg, #fce4ec 0%, #f48fb1 100%);">
+              <img src="new assets/didi@2x.png" alt="Didi - The Infant Savant" loading="lazy">
+            </div>
+            <div class="char-card-info">
+              <h3>Didi</h3>
+              <div class="char-title">The Infant Savant</div>
+              <div class="char-hook">Tiny, curious &amp; impossibly cute. Don't be fooled &mdash; she has powerful hypnotic abilities.</div>
+            </div>
+            <span class="char-card-flip-hint">Click to flip</span>
+          </div>
+          <div class="char-card-back" style="border-color: var(--didi-hotpink);">
+            <h3 style="color: var(--didi-hotpink);">Didi</h3>
+            <div class="char-detail">
+              <span class="char-detail-label">Powers</span>
+              <span class="char-detail-value">Strong hypnotic abilities</span>
+            </div>
+            <div class="char-detail">
+              <span class="char-detail-label">Likes</span>
+              <span class="char-detail-value">Hugs, shiny things, loud techno music</span>
+            </div>
+            <div class="char-detail">
+              <span class="char-detail-label">Secret</span>
+              <span class="char-detail-value">Jealous of Gogo</span>
+            </div>
+            <div class="char-motto accent-text" style="color: var(--didi-hotpink);">&ldquo;Adore me!&rdquo;</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LUCKY - D6: Updated with single character image from new assets -->
+      <div class="char-card" data-character="lucky">
+        <div class="char-card-inner">
+          <div class="char-card-front">
+            <div class="char-card-img" style="background: linear-gradient(135deg, #fffde7 0%, #fff9c4 100%);">
+              <img src="new assets/lucky@2x.png" alt="Lucky - The Worrisome Scientist" loading="lazy">
+            </div>
+            <div class="char-card-info">
+              <h3>Lucky</h3>
+              <div class="char-title">The Worrisome Scientist</div>
+              <div class="char-hook">Quiet, geeky &amp; super logical. She can digitalize herself and enter the internet.</div>
+            </div>
+            <span class="char-card-flip-hint">Click to flip</span>
+          </div>
+          <div class="char-card-back" style="border-color: var(--lucky-yellow-deep);">
+            <h3 style="color: var(--lucky-yellow-deep);">Lucky</h3>
+            <div class="char-detail">
+              <span class="char-detail-label">Powers</span>
+              <span class="char-detail-value">Can digitalize herself and enter the internet world</span>
+            </div>
+            <div class="char-detail">
+              <span class="char-detail-label">Likes</span>
+              <span class="char-detail-value">Everything perfectly systematized</span>
+            </div>
+            <div class="char-detail">
+              <span class="char-detail-label">Secret</span>
+              <span class="char-detail-value">Plotting how to leave Chromia to become a purely digital being</span>
+            </div>
+            <div class="char-motto accent-text" style="color: var(--lucky-yellow-deep);">&ldquo;When in doubt, follow the logic&rdquo;</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- POZZO - D6: Updated with single character image from new assets -->
+      <div class="char-card" data-character="pozzo">
+        <div class="char-card-inner">
+          <div class="char-card-front">
+            <div class="char-card-img" style="background: linear-gradient(135deg, #fff3e0 0%, #ffcc80 100%);">
+              <img src="new assets/pozzo@2x.png" alt="Pozzo - The Glutton" loading="lazy">
+            </div>
+            <div class="char-card-info">
+              <h3>Pozzo</h3>
+              <div class="char-title">The Glutton</div>
+              <div class="char-hook">Simple, loyal &amp; endlessly hungry. He has an unlimited appetite and never gets full.</div>
+            </div>
+            <span class="char-card-flip-hint">Click to flip</span>
+          </div>
+          <div class="char-card-back" style="border-color: var(--pozzo-orange);">
+            <h3 style="color: var(--pozzo-orange);">Pozzo</h3>
+            <div class="char-detail">
+              <span class="char-detail-label">Powers</span>
+              <span class="char-detail-value">Unlimited appetite &mdash; never gets full</span>
+            </div>
+            <div class="char-detail">
+              <span class="char-detail-label">Likes</span>
+              <span class="char-detail-value">Naps, pancakes, being given clear instructions</span>
+            </div>
+            <div class="char-detail">
+              <span class="char-detail-label">Secret</span>
+              <span class="char-detail-value">Once ate his own house</span>
+            </div>
+            <div class="char-motto accent-text" style="color: var(--pozzo-orange);">&ldquo;Let&rsquo;s eat first&rdquo;</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- QUIDDIE - D6: Updated with single character image from new assets -->
+      <div class="char-card" data-character="quiddie">
+        <div class="char-card-inner">
+          <div class="char-card-front">
+            <div class="char-card-img" style="background: linear-gradient(135deg, #f1f8e9 0%, #c5e1a5 100%);">
+              <img src="new assets/quiddie.png" alt="Quiddie - The Cynic" loading="lazy">
+            </div>
+            <div class="char-card-info">
+              <h3>Quiddie</h3>
+              <div class="char-title">The Cynic</div>
+              <div class="char-hook">Bitter, intelligent &amp; vain. He drains colour from everything he touches. The villain of Chromia.</div>
+            </div>
+            <span class="char-card-flip-hint">Click to flip</span>
+          </div>
+          <div class="char-card-back" style="border-color: var(--quiddie-green);">
+            <h3 style="color: var(--quiddie-green);">Quiddie</h3>
+            <div class="char-detail">
+              <span class="char-detail-label">Powers</span>
+              <span class="char-detail-value">Can suck onto things and drain their energy and colour</span>
+            </div>
+            <div class="char-detail">
+              <span class="char-detail-label">Goal</span>
+              <span class="char-detail-value">To make Chromia black and white &mdash; because he sees in black and white</span>
+            </div>
+            <div class="char-detail">
+              <span class="char-detail-label">Secret</span>
+              <span class="char-detail-value">Is in love with Bonbon</span>
+            </div>
+            <div class="char-motto accent-text" style="color: var(--quiddie-green);">&ldquo;Paint it black&rdquo;</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== SECTION 4: WELCOME TO CHROMIA ========== -->
+  <section id="chromia" class="chromia">
+    <!-- Paint Drip into Chromia -->
+    <svg style="display:block;width:100%;height:50px;margin-bottom:-1px;" viewBox="0 0 1440 50" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,0 L1440,0 L1440,20 Q1360,20 1360,32 Q1360,48 1340,48 Q1320,48 1320,32 Q1320,18 1200,20 Q1080,22 1080,30 Q1080,48 1060,48 Q1040,48 1040,30 Q1040,18 920,20 L920,35 Q920,50 900,50 Q880,50 880,35 Q880,20 760,18 Q640,15 640,25 Q640,45 620,45 Q600,45 600,25 Q600,20 480,20 L480,38 Q480,50 460,50 Q440,50 440,38 Q440,20 320,18 Q200,15 200,28 Q200,48 180,48 Q160,48 160,28 Q160,18 80,20 Q40,22 0,20 L0,0 Z" fill="#FAFAF8"/>
+    </svg>
+
+    <div class="chromia-panorama">
+      <img src="assets/images/world/chromia-panorama.png" alt="The Land of Chromia - a vibrant painted world with dripping paint clouds, curving rivers, and colorful vegetation" loading="lazy">
+      <div class="chromia-text-overlay reveal">
+        <span class="section-label" style="color: var(--lucky-yellow);">Explore the World <span class="thai-label">| สำรวจโลก</span></span>
+        <h2>Welcome to Chromia<br><span class="thai-subtitle">ยินดีต้อนรับสู่โครเมีย</span></h2>
+        <p>A dazzling land where everything is made of paint. Dripping clouds hang in the sky, trees bloom in impossible colours, and paint-can houses dot the landscape. This is where Floob's adventure truly begins.</p>
+        <p class="thai-text">ดินแดนมหัศจรรย์ที่ทุกอย่างทำจากสี เมฆหยดสีลอยอยู่บนฟ้า ต้นไม้ออกดอกสีที่เป็นไปไม่ได้ และบ้านกระป๋องสีกระจายอยู่ทั่วภูมิทัศน์ ที่นี่คือจุดเริ่มต้นการผจญภัยของฟลูบ</p>
+      </div>
+    </div>
+
+    <div class="chromia-scenes">
+      <div class="chromia-scene">
+        <img src="assets/images/world/chromia-village.png" alt="Chromia village scene with characters" loading="lazy">
+        <div class="chromia-scene-label">The Village<br><span class="thai-small">หมู่บ้าน</span></div>
+      </div>
+      <div class="chromia-scene">
+        <img src="assets/images/world/chromia-paintcan.png" alt="Giant paint can house in Chromia" loading="lazy">
+        <div class="chromia-scene-label">Paint Can House<br><span class="thai-small">บ้านกระป๋องสี</span></div>
+      </div>
+      <div class="chromia-scene">
+        <img src="assets/images/world/bonbon-house.png" alt="Bonbon's cozy pink interior" loading="lazy">
+        <div class="chromia-scene-label">Bonbon's Home<br><span class="thai-small">บ้านบองบอง</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 5: EPISODE TEASERS ========== -->
+  <section id="episodes" class="episodes">
+    <div class="episodes-header reveal">
+      <span class="section-label">The Story <span class="thai-label">| เรื่องราว</span></span>
+      <h2>The Story So Far<br><span class="thai-subtitle">เรื่องราวจนถึงตอนนี้</span></h2>
+    </div>
+
+    <div class="episodes-grid">
+      <div class="episode-card">
+        <div class="episode-card-img">
+          <img src="assets/images/world/chromia-panorama.png" alt="Episode 1 scene" loading="lazy">
+        </div>
+        <div class="episode-card-body">
+          <div class="episode-number">Episode 1 | ตอนที่ 1</div>
+          <h3>A Floob is Born<br><span class="thai-episode-title">กำเนิดฟลูบ</span></h3>
+          <p>When an artist's frustration meets a bolt of lightning, two jars of paint combine to create something miraculous. A strange one-eyed creature is born &mdash; and life will never be the same.</p>
+          <p class="thai-text-small">เมื่อความผิดหวังของศิลปินพบกับสายฟ้า ขวดสีสองขวดรวมกันเป็นสิ่งมหัศจรรย์ สิ่งมีชีวิตตาเดียวประหลาดถือกำเนิด — และชีวิตจะไม่เหมือนเดิมอีกต่อไป</p>
+        </div>
+      </div>
+
+      <!-- F11: Episode 2 image TBD -->
+      <div class="episode-card">
+        <div class="episode-card-img">
+          <!-- TODO: Replace with final Episode 2 artwork when available -->
+          <img src="assets/images/world/chromia-village.png" alt="Episode 2 scene - TBD" loading="lazy">
+        </div>
+        <div class="episode-card-body">
+          <div class="episode-number">Episode 2 | ตอนที่ 2</div>
+          <h3>Welcome to Chromia<br><span class="thai-episode-title">ยินดีต้อนรับสู่โครเมีย</span></h3>
+          <p>Floob leaps through a painting and lands in a world made entirely of paint. He meets Bonbon, Taffy, Lucky, and Pozzo &mdash; but how will he find his way home?</p>
+          <p class="thai-text-small">ฟลูบกระโดดผ่านภาพวาดและมาถึงโลกที่ทำจากสีทั้งหมด เขาพบบองบอง แทฟฟี่ ลัคกี้ และป๊อซโซ — แต่เขาจะหาทางกลับบ้านได้อย่างไร?</p>
+        </div>
+      </div>
+
+      <!-- F11: Episode 3 image TBD -->
+      <div class="episode-card">
+        <div class="episode-card-img">
+          <!-- TODO: Replace with final Episode 3 artwork when available -->
+          <img src="assets/images/world/chromia-paintcan.png" alt="Episode 3 scene - TBD" loading="lazy">
+        </div>
+        <div class="episode-card-body">
+          <div class="episode-number">Episode 3 | ตอนที่ 3</div>
+          <h3>A Nemesis is Born<br><span class="thai-episode-title">กำเนิดศัตรู</span></h3>
+          <p>Floob returns to Chromia and makes new friends &mdash; but one creature is watching from the shadows. Quiddie's jealousy ignites a rivalry that threatens to drain all colour from the land.</p>
+          <p class="thai-text-small">ฟลูบกลับมาโครเมียและได้เพื่อนใหม่ — แต่มีสิ่งมีชีวิตหนึ่งเฝ้ามองจากเงามืด ความอิจฉาของควิดดี้จุดชนวนการแข่งขันที่คุกคามจะดูดสีออกจากดินแดน</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 6: BRAND VALUES ========== -->
+  <section id="values" class="values">
+    <div class="values-overlay" aria-hidden="true"></div>
+    <div class="values-content">
+      <div class="values-header reveal">
+        <span class="section-label">What We Believe <span class="thai-label">| สิ่งที่เราเชื่อ</span></span>
+        <h2>Core Values<br><span class="thai-subtitle">ค่านิยมหลัก</span></h2>
+      </div>
+
+      <!-- G12: Placeholder icons until final icon assets are provided -->
+      <div class="values-grid">
+        <div class="value-item">
+          <span class="value-icon placeholder-icon" aria-label="Art icon placeholder"></span>
+          <h3>Art <span class="thai-value-title">| ศิลปะ</span></h3>
+          <p>Creativity flows through everything in the Floobiverse. Every character, every landscape &mdash; born from the magic of paint.<br><span class="thai-text-small">ความคิดสร้างสรรค์ไหลผ่านทุกอย่างใน Floobiverse ทุกตัวละคร ทุกภูมิทัศน์ — เกิดจากเวทมนตร์ของสี</span></p>
+        </div>
+        <div class="value-item">
+          <span class="value-icon placeholder-icon" aria-label="Creativity icon placeholder"></span>
+          <h3>Creativity <span class="thai-value-title">| ความคิดสร้างสรรค์</span></h3>
+          <p>Imagination has no limits. If you can dream it, you can paint it into existence.<br><span class="thai-text-small">จินตนาการไม่มีขีดจำกัด ถ้าคุณฝันได้ คุณก็วาดมันให้เป็นจริงได้</span></p>
+        </div>
+        <div class="value-item">
+          <span class="value-icon placeholder-icon" aria-label="Friendship icon placeholder"></span>
+          <h3>Friendship <span class="thai-value-title">| มิตรภาพ</span></h3>
+          <p>From Floob and Bonbon to Boo and Didi, every bond makes the world more colourful.<br><span class="thai-text-small">จากฟลูบและบองบองถึงบูและดีดี้ ทุกความผูกพันทำให้โลกสีสันมากขึ้น</span></p>
+        </div>
+        <div class="value-item">
+          <span class="value-icon placeholder-icon" aria-label="Fun icon placeholder"></span>
+          <h3>Fun <span class="thai-value-title">| ความสนุก</span></h3>
+          <p>Life is better when you're laughing. The Floobiverse is a place where joy comes first.<br><span class="thai-text-small">ชีวิตดีขึ้นเมื่อคุณหัวเราะ Floobiverse คือสถานที่ที่ความสุขมาก่อน</span></p>
+        </div>
+        <div class="value-item">
+          <span class="value-icon placeholder-icon" aria-label="Community icon placeholder"></span>
+          <h3>Community <span class="thai-value-title">| ชุมชน</span></h3>
+          <p>Chromia thrives because its citizens look out for each other &mdash; even Quiddie, sometimes.<br><span class="thai-text-small">โครเมียเจริญรุ่งเรืองเพราะพลเมืองดูแลกัน — แม้แต่ควิดดี้ บางครั้ง</span></p>
+        </div>
+        <div class="value-item">
+          <span class="value-icon placeholder-icon" aria-label="Adventure icon placeholder"></span>
+          <h3>Adventure <span class="thai-value-title">| การผจญภัย</span></h3>
+          <p>Every painting is a portal. Every day in Chromia brings a new discovery.<br><span class="thai-text-small">ทุกภาพวาดคือประตูมิติ ทุกวันในโครเมียนำมาซึ่งการค้นพบใหม่</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 7: GALLERY ========== -->
+  <!-- H14: Retitled from "The Floobiverse in 3D" to "Gallery" -->
+  <section id="gallery" class="gallery">
+    <div class="gallery-header reveal">
+      <span class="section-label" style="color: var(--floob-teal-light);">Beyond the Screen <span class="thai-label">| เหนือจอภาพ</span></span>
+      <h2>Gallery<br><span class="thai-subtitle">แกลเลอรี</span></h2>
+      <p>From digital art to physical products, the Floobiverse characters are coming to life in every dimension.</p>
+      <p class="thai-text">จากศิลปะดิจิทัลสู่ผลิตภัณฑ์จริง ตัวละคร Floobiverse กำลังมีชีวิตในทุกมิติ</p>
+    </div>
+
+    <!-- BENTO GALLERY - Images displayed in their natural proportions -->
+    <div class="gallery-new-layout">
+      <!-- Row 1: 3D Floob (16:9 wide) + Floob Sandwich (1:1 square) -->
+      <div class="gallery-row-3d">
+        <div class="gallery-item">
+          <img src="assets/images/3d/floob-3d.png" alt="3D render of Floob surrounded by paint blobs" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/3d/floob-sandwich.png" alt="3D Floob on a PB&J sandwich" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Row 2: Two 16:9 character scenes -->
+      <div class="gallery-row-wide">
+        <div class="gallery-item">
+          <img src="new assets/floobiverse characters dancing.jpg" alt="Floobiverse characters dancing together" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="new assets/floobiverse characters at beach.jpg" alt="Floobiverse characters at the beach" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Row 3: Portrait shopping mall (3:4) + Square group 3D (1:1) -->
+      <div class="gallery-row-mixed">
+        <div class="gallery-item">
+          <img src="assets/images/events/shopping-center.png" alt="Floobiverse at shopping mall" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="assets/images/3d/group-3d.png" alt="3D render of all Floobiverse characters" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Row 4: Full-width 16:9 fans collage -->
+      <div class="gallery-row-full">
+        <div class="gallery-item">
+          <img src="new assets/floob fans.001.jpeg" alt="Floobiverse fans artwork" loading="lazy">
+        </div>
+      </div>
+
+      <!-- YouTube embed -->
+      <div class="gallery-video-container">
+        <iframe
+          src="https://www.youtube.com/embed/jREfzFF4vfA"
+          title="The Floobiverse - Official Video"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 8: FOOTER ========== -->
+  <footer class="footer">
+    <!-- Paint Drip into Footer -->
+    <svg style="position:absolute;top:-49px;left:0;width:100%;height:50px;" viewBox="0 0 1440 50" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,50 L1440,50 L1440,30 Q1360,30 1360,18 Q1360,2 1340,2 Q1320,2 1320,18 Q1320,32 1200,30 Q1080,28 1080,20 Q1080,2 1060,2 Q1040,2 1040,20 Q1040,32 920,30 L920,15 Q920,0 900,0 Q880,0 880,15 Q880,30 760,32 Q640,35 640,25 Q640,5 620,5 Q600,5 600,25 Q600,30 480,30 L480,12 Q480,0 460,0 Q440,0 440,12 Q440,30 320,32 Q200,35 200,22 Q200,2 180,2 Q160,2 160,22 Q160,32 80,30 Q40,28 0,30 L0,50 Z" fill="#1A1A1A"/>
+    </svg>
+
+    <div class="footer-thankyou reveal">Thank You!<br><span class="thai-thankyou">ขอบคุณ!</span></div>
+
+    <div class="footer-creator reveal reveal-delay-1">
+      <img src="assets/images/brand/creator-matt.png" alt="Matt Wills - Creator of The Floobiverse" class="footer-creator-photo" loading="lazy">
+      <div class="footer-creator-info">
+        <h3>Created by Matt Wills<br><span class="thai-creator">สร้างสรรค์โดย Matt Wills</span></h3>
+        <p>New Zealand artist &amp; designer, based in Bangkok<br><span class="thai-text-small">ศิลปินและนักออกแบบชาวนิวซีแลนด์ ประจำกรุงเทพฯ</span></p>
+        <p>Founder of Floob Creative Ltd.<br><span class="thai-text-small">ผู้ก่อตั้ง Floob Creative Ltd.</span></p>
+      </div>
+    </div>
+
+    <!-- Instagram QR Code -->
+    <div class="footer-instagram reveal reveal-delay-2">
+      <p class="footer-instagram-label">Follow us on Instagram<br><span class="thai-text-small">ติดตามเราบน Instagram</span></p>
+      <img src="assets/images/social/instagram-qr.png" alt="Scan to follow The Floobiverse on Instagram" class="footer-qr" loading="lazy">
+    </div>
+
+    <div class="footer-copyright">
+      <p>&copy; Floob Creative Ltd. 2022&ndash;2026. All rights reserved.</p>
+      <p>The Floobiverse&trade; and all related characters are trademarks of Floob Creative Ltd.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
