@@ -387,6 +387,18 @@ h3 {
   padding-left: 1rem;
 }
 
+/* Hero "welcome to the" text - matches section-label style from origin */
+.hero-welcome-text {
+  font-family: var(--font-display);
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--lucky-yellow);
+  margin-bottom: 0.5rem;
+  display: block;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
 /* B3: Hero logo - MUCH BIGGER */
 .hero-logo {
   width: 100%; /* Full width of column */
@@ -421,6 +433,9 @@ h3 {
     width: 90vw; /* Almost full viewport width */
     max-width: none;
     margin: 0 auto 1rem;
+  }
+  .hero-welcome-text {
+    text-align: center;
   }
 }
 
@@ -1069,6 +1084,15 @@ h3 {
 .value-icon.placeholder {
   font-size: 1.5rem;
   color: var(--dark-soft);
+}
+
+/* Value icon images - actual icon assets */
+.value-icon-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin: 0 auto 1rem;
+  display: block;
 }
 
 /* G13: Increased value heading size */
