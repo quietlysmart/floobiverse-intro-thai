@@ -1549,6 +1549,29 @@ h3 {
     width: 90%;
   }
 
+  /* Chromia panorama - taller on mobile, zoom into center */
+  .chromia-panorama {
+    height: 80vh; /* Fixed height on mobile */
+    min-height: 600px;
+  }
+
+  .chromia-panorama img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center; /* Zoom into center of image */
+  }
+
+  .chromia-text-overlay {
+    min-height: 60%;
+    padding: 2rem 1.5rem 1.5rem;
+  }
+
+  .chromia-text-overlay p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
   /* Characters - single column, taller cards */
   .characters-grid {
     grid-template-columns: 1fr;
