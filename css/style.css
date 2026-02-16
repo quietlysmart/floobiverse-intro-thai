@@ -1108,7 +1108,7 @@ h3 {
   font-size: 1.5rem; /* Increased from 1.3rem */
   text-transform: uppercase;
   margin-bottom: 0.5rem;
-  letter-spacing: 0.05em; /* Improve kerning for uppercase text */
+  letter-spacing: 0.12em; /* Increased spacing to fix I-V kerning in CREATIVITY */
 }
 
 /* G13: Increased value description text size */
