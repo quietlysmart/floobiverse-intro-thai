@@ -72,21 +72,9 @@
 }
 
 /* --- LOADER (Floob-themed) --- */
+/* DISABLED: Loader hidden for instant load on Wix embed */
 .loader {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  background: linear-gradient(135deg, var(--floob-teal) 0%, var(--floob-teal-dark) 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
-}
-
-.loader.hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
+  display: none !important;
 }
 
 .loader-content {
@@ -878,8 +866,9 @@ h3 {
   left: 0;
   right: 0;
   padding: 3rem 2rem 2rem;
-  background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 100%);
+  background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.5) 50%, transparent 100%);
   color: var(--white);
+  min-height: 50%; /* Ensure enough space for text on mobile */
 }
 
 .chromia-text-overlay h2 {
@@ -1264,6 +1253,27 @@ h3 {
   aspect-ratio: 16/9;
 }
 
+/* Video label above YouTube embed */
+.gallery-video-label {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.gallery-video-label .thai-text-small {
+  display: block;
+  font-family: var(--font-thai);
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin-top: 0.3rem;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
 /* H16: YouTube embed responsive container */
 .gallery-video-container {
   position: relative;
@@ -1273,6 +1283,74 @@ h3 {
   overflow: hidden;
   border-radius: 16px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Instagram section in gallery */
+.gallery-instagram {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 2rem 0;
+}
+
+.gallery-instagram-label {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--floob-teal-light);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.gallery-instagram-handle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0.75rem 0;
+}
+
+.gallery-instagram-handle a {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: var(--white);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.gallery-instagram-handle a:hover {
+  color: var(--floob-teal-light);
+}
+
+.instagram-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: var(--floob-teal);
+  border-radius: 50%;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.instagram-arrow:hover {
+  background: var(--floob-teal-light);
+  transform: scale(1.1);
+}
+
+.instagram-arrow svg {
+  width: 14px;
+  height: 14px;
+  fill: var(--white);
+}
+
+.gallery-qr {
+  width: 150px;
+  height: 150px;
+  border-radius: 12px;
+  background: white;
+  padding: 8px;
+  display: block;
+  margin: 1rem auto 0;
 }
 
 .gallery-video-container iframe {
@@ -1294,12 +1372,14 @@ h3 {
 }
 
 /* --- SECTION 8: FOOTER --- */
+/* HIDDEN: Footer disabled for Wix embed - main site has its own footer */
 .footer {
-  background: var(--dark);
-  color: var(--white);
-  text-align: center;
-  padding: 4rem 2rem 2rem;
-  position: relative;
+  display: none !important;
+}
+
+/* Gallery reduced bottom padding since no footer */
+.gallery {
+  padding-bottom: 2rem;
 }
 
 .footer-thankyou {
