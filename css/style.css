@@ -236,6 +236,12 @@ h3 {
 }
 
 /* --- Navigation --- */
+/* HIDDEN: Nav is disabled for Wix embed - main site has its own header */
+.nav {
+  display: none !important;
+}
+
+/* Original nav styles (kept for reference if needed later)
 .nav {
   position: fixed;
   top: 0;
@@ -257,6 +263,7 @@ h3 {
 .nav.visible {
   transform: translateY(0);
 }
+*/
 
 .nav-logo {
   height: 36px;
