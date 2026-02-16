@@ -422,19 +422,29 @@ h3 {
     text-align: center;
     padding: 1rem;
     gap: 1rem;
+    justify-items: center; /* Center grid items horizontally */
   }
   .hero-right {
     text-align: center;
     order: 1;
     padding-left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .hero-left {
     order: 2;
     justify-content: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
   .hero-group-img {
-    width: 95vw; /* Almost full viewport width on mobile */
+    width: 90%;
+    max-width: 400px;
     max-height: 50vh;
+    margin: 0 auto;
   }
   .hero-logo {
     width: 90vw; /* Almost full viewport width */
@@ -1426,17 +1436,37 @@ h3 {
     grid-template-columns: 1fr;
     gap: 2rem;
     text-align: center;
+    justify-items: center; /* Center grid items */
+  }
+
+  .origin-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .origin-text p {
+    max-width: 90%;
+  }
+
+  .origin-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   .origin-image img {
-    width: 90vw;
-    max-width: none;
+    width: 80%;
+    max-width: 350px;
+    margin: 0 auto;
   }
 
   .origin-quote {
     border-left: none;
     border-top: 3px solid var(--lucky-yellow);
     padding-top: 1rem;
+    width: 90%;
   }
 
   /* Characters - single column, taller cards */
