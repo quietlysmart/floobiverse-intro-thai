@@ -1227,6 +1227,19 @@ h3 {
   aspect-ratio: 1/1; /* group-3d is 979x979 */
 }
 
+/* Le Meridien row: landscape + portrait side by side, scaled to match other tiles */
+.gallery-row-bigport {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.gallery-row-bigport .gallery-item { height: 300px; }
+@media (max-width: 768px) {
+  .gallery-row-bigport { grid-template-columns: 1fr; }
+  .gallery-row-bigport .gallery-item { height: 240px; }
+}
+
 /* Row 4: Full-width 16:9 fans image */
 .gallery-row-full {
   margin-bottom: 2rem;
