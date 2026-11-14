@@ -19,7 +19,10 @@ built from the `main` branch of this repository.
 To make the new page scroll like a normal page under the Wix menu, the embed box is sized to fill the
 screen below the menu. That is done by a small snippet in Wix: Dashboard > Settings > Custom Code >
 Head > **"Floobiverse embed height"** (all pages, Essential). It only acts while the embed box points
-at an address containing `/floobiverse/`, so it does nothing to the old page.
+at an address containing `/floobiverse/`, so it does nothing to the old page. On phones it also stops
+the Wix page around the box from scrolling (otherwise iPhones sometimes slid the website instead of the
+Floobiverse page). The cost: on phones the small Wix footer (Privacy Policy) is not shown on this page;
+desktop keeps it.
 
 ## Old embed settings (exactly as they were before the switch)
 
@@ -39,6 +42,10 @@ at an address containing `/floobiverse/`, so it does nothing to the old page.
 That is all. The old page comes back at its old size, because the height snippet switches itself off
 when the address no longer contains `/floobiverse/`. Optional tidy-up: you can also turn off or delete
 the "Floobiverse embed height" snippet in Custom Code, but leaving it on does no harm.
+
+If the whole site ever needs to go back to exactly how the repository was before the switch, the
+git tag `live-before-v4-2026-11-14` holds that version (the old page was never changed, so this is
+only a safety net).
 
 ## To change the new page later
 
