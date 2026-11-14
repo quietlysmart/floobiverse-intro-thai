@@ -591,6 +591,9 @@ document.addEventListener('click', e => {
 if (motionOK) {
   gsap.registerPlugin(ScrollTrigger);
   const mm = gsap.matchMedia();
+  // Inside another website (the Floob Creative site) on a touch screen, the page scrolls itself, so a swipe can never
+  // scroll the surrounding website by mistake and the scroll scenes stay in step with the finger.
+  if (window.self !== window.top && ScrollTrigger.isTouch === 1) ScrollTrigger.normalizeScroll({ allowNestedScroll: true });
 
   // First scroll: a drop of paint falls from the title.
   addEventListener('scroll', () => $('.paint-fall')?.classList.add('fall'), { once: true, passive: true });
