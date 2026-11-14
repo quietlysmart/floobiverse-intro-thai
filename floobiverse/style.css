@@ -312,7 +312,7 @@ html:not(.js) .power-btn { display: none; }
 .episode { background: #fff; border-radius: var(--r-lg); overflow: hidden; box-shadow: 0 8px 0 var(--c); display: flex; flex-direction: column; }
 .episode > img, .ep-art { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
 .ep-art { background: radial-gradient(circle at 50% 60%, #39c9bb, var(--teal) 70%); display: grid; place-items: center; overflow: hidden; }
-.ep-art img { height: 92%; width: auto; filter: drop-shadow(0 10px 10px rgba(0,0,0,.18)); }
+.ep-art img { width: 92%; height: auto; align-self: start; margin-top: 6.533%; filter: drop-shadow(0 10px 10px rgba(0,0,0,.18)); }
 .ep-body { padding: var(--sp-3) var(--sp-3) var(--sp-3); }
 .ep-num { font: 700 .85rem var(--display); letter-spacing: .14em; text-transform: uppercase; color: var(--c); margin-bottom: 6px; filter: brightness(.8); }
 .episode h3 { font-size: 1.75rem; font-weight: 800; letter-spacing: -0.01em; margin-bottom: 8px; color: var(--teal-deep); }
